@@ -536,7 +536,7 @@ a.download-button span {
 }
 
 /* ============================================================
-   ФУТЕР (выровнен с контентом)
+   ФУТЕР (выровнен с контентом) — ОДИН БЛОК
    ============================================================ */
 .site-footer {
   width: 1100px;
@@ -559,6 +559,7 @@ a.download-button span {
 .site-footer .creds {
   margin-top: 10px;
   overflow: hidden;
+  color: #333;
 }
 
 .site-footer .creds small {
@@ -568,12 +569,17 @@ a.download-button span {
   margin-left: 15px;
 }
 
+.site-footer .creds small a {
+  color: #63a52a;
+}
+
 .site-footer .owner .avatar {
-  background-color: #666;
+  background-color: transparent;
   display: block;
   margin: 0 15px 0 0;
   width: 60px;
   float: left;
+  border: none;
 }
 
 .site-footer .owner img {
