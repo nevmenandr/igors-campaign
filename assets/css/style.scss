@@ -5,15 +5,15 @@
 
 /* ===== РОДИТЕЛЬСКИЙ КОНТЕЙНЕР ===== */
 .wrapper {
-  max-width: 1340px; /* 1100px контент + 200px меню + 40px отступы */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 /* ===== ЗАГОЛОВОК ===== */
 .site-header {
-  max-width: 1100px; /* Ограничиваем ширину заголовка, чтобы он был над контентом */
-  margin-left: 240px; /* Сдвигаем вправо, чтобы выровнять с контентом */
+  max-width: 1100px;
+  margin-left: 240px;
   padding: 0;
 }
 
@@ -24,13 +24,13 @@
 /* ===== КОНТЕЙНЕР ДЛЯ МЕНЮ И КОНТЕНТА ===== */
 .main-layout {
   display: flex;
-  gap: 40px; /* Расстояние между меню и контентом */
+  gap: 40px;
   align-items: flex-start;
 }
 
 /* ===== БОКОВОЕ МЕНЮ ===== */
 .sidebar-left {
-  flex: 0 0 200px; /* Фиксированная ширина 200px */
+  flex: 0 0 200px;
   background: #f5f5f5;
   padding: 15px 12px;
   border-radius: 6px;
@@ -38,11 +38,13 @@
   margin-top: 10px;
 }
 
-/* ===== ОСНОВНОЙ КОНТЕНТ (РАСШИРЕН) ===== */
+/* ===== ОСНОВНОЙ КОНТЕНТ (ПРИНУДИТЕЛЬНОЕ РАСШИРЕНИЕ) ===== */
 #container {
   flex: 1;
-  max-width: 1100px; /* Увеличили с 920px до 1100px */
+  width: 1100px !important; /* Переопределяем встроенный стиль темы */
+  max-width: 1100px !important; /* Переопределяем встроенный стиль темы */
   min-width: 0;
+  margin: 0 !important; /* Убираем автоматические отступы */
 }
 
 /* ===== СТИЛИ ДЛЯ НАВИГАЦИИ ===== */
@@ -95,6 +97,7 @@
   }
   
   #container {
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
