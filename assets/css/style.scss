@@ -62,12 +62,12 @@ h1.title {
 }
 
 /* ============================================================
-   ОСНОВНОЙ КОНТЕЙНЕР (#container) — РАСШИРЕН
+   ОСНОВНОЙ КОНТЕЙНЕР (#container) — РАСШИРЕН С ОТСТУПОМ
    ============================================================ */
 #container {
   width: 1100px;
   max-width: 1100px;
-  margin: 0;
+  margin: 0 0 0 240px; /* отступ слева 240px для выравнивания с футером */
   border: 1px solid #2a2a2a;
   background: #ddd url(../images/pattern.png);
   box-shadow: 0 0 5px #b1b1b1;
@@ -536,95 +536,69 @@ a.download-button span {
 }
 
 /* ============================================================
-   ФУТЕР — ОКОНЧАТЕЛЬНОЕ ПЕРЕОПРЕДЕЛЕНИЕ
+   ФУТЕР (выровнен с контентом)
    ============================================================ */
-footer.site-footer,
 .site-footer {
-  width: 1100px !important;
-  max-width: 1100px !important;
-  margin-left: 240px !important;
-  margin-right: 0 !important;
-  margin-top: 20px !important;
-  margin-bottom: 60px !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-  float: none !important;
-  clear: both !important;
-  display: block !important;
-  position: relative !important;
-  left: auto !important;
-  right: auto !important;
-  top: auto !important;
-  bottom: auto !important;
+  width: 1100px;
+  max-width: 1100px;
+  margin: 20px 0 60px 240px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-footer.site-footer .owner,
 .site-footer .owner {
-  background: #222 !important;
-  border: 5px solid #444 !important;
-  padding: 15px !important;
-  color: #d6d6d6 !important;
-  margin: 0 !important;
-  overflow: hidden !important;
-  width: auto !important;
-  max-width: none !important;
+  background: #222;
+  border: 5px solid #444;
+  padding: 15px;
+  color: #d6d6d6;
+  margin: 0;
+  overflow: hidden;
 }
 
-footer.site-footer .creds,
 .site-footer .creds {
-  margin-top: 10px !important;
-  overflow: hidden !important;
-  color: #333 !important;
-  text-align: right !important;
-  padding: 0 5px !important;
-  width: auto !important;
+  margin-top: 10px;
+  overflow: hidden;
+  color: #333;
+  text-align: right;
+  padding: 0 5px;
 }
 
-footer.site-footer .creds small,
 .site-footer .creds small {
-  font-size: 10px !important;
-  text-align: right !important;
-  float: right !important;
-  margin-left: 15px !important;
+  font-size: 10px;
+  text-align: right;
+  float: right;
+  margin-left: 15px;
 }
 
-footer.site-footer .creds small a,
 .site-footer .creds small a {
-  color: #63a52a !important;
+  color: #63a52a;
 }
 
-footer.site-footer .owner .avatar,
 .site-footer .owner .avatar {
-  background-color: transparent !important;
-  display: block !important;
-  margin: 0 15px 0 0 !important;
-  width: 60px !important;
-  float: left !important;
-  border: none !important;
-  padding: 0 !important;
+  background-color: transparent;
+  display: block;
+  margin: 0 15px 0 0;
+  width: 60px;
+  float: left;
+  border: none;
 }
 
-footer.site-footer .owner img,
 .site-footer .owner img {
-  display: block !important;
-  border: 1px solid #2a2a2a !important;
-  margin: 0 !important;
-  width: 48px !important;
-  height: 48px !important;
+  display: block;
+  border: 1px solid #2a2a2a;
+  margin: 0;
 }
 
-footer.site-footer .owner p,
 .site-footer .owner p {
-  font-family: Georgia, serif !important;
-  margin: 0 !important;
-  padding-top: 5px !important;
-  overflow: hidden !important;
+  font-family: Georgia, serif;
+  margin: 0;
+  padding-top: 5px;
+  overflow: hidden;
 }
 
-footer.site-footer .owner p a,
 .site-footer .owner p a {
-  font-size: 16px !important;
-  font-style: italic !important;
+  font-size: 16px;
+  font-style: italic;
 }
 
 /* ============================================================
@@ -656,12 +630,12 @@ footer.site-footer .owner p a,
   #container {
     width: 100%;
     max-width: 100%;
+    margin: 0;
   }
   
-  footer.site-footer,
   .site-footer {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0 60px 0;
   }
 }
