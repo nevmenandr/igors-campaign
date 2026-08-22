@@ -91,6 +91,7 @@
 - **Параллельный корпус переводов «Слова о полку Игореве»**: [nevmenandr.net/slovo](https://nevmenandr.net/slovo) (2007)
 - **Статья о корпусе** [Параллельный корпус переводов «Слова о полку Игореве» как проект](https://nevmenandr.github.io/portfolio/assets/pdf/cgi2025-1-spi.pdf), DOI: 10.31860/cgi-2025-1-60-69 (2025) 
 - **Принципы лингвистической реконструкции**: [файл](reconstruction.txt) или [внешний источник](https://studfile.net/preview/4513885/)
+- [Праиндоевропейский язык: реконструкция или химера?](https://slovokod.ru/pie-kritika/)
 
 ---
 
