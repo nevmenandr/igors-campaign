@@ -4,40 +4,65 @@
 @import "jekyll-theme-time-machine";
 
 
-/* ===== МЕНЮ ПОД ШАПКОЙ ===== */
-.menu-wrapper {
-  background: #f5f5f5;
-  padding: 12px 20px;
-  border-radius: 6px;
-  border: 1px solid #e0e0e0;
-  margin-bottom: 20px;
-  text-align: center; /* Центрируем пункты меню */
+/* ===== КОНТЕЙНЕР ДЛЯ МЕНЮ И КОНТЕНТА ===== */
+.content-wrapper {
+  overflow: hidden; /* Очищаем float */
+  margin-top: 10px;
 }
 
-.menu-wrapper ul {
+/* ===== БОКОВОЕ МЕНЮ СЛЕВА ===== */
+.sidebar-left {
+  float: left;
+  width: 200px;
+  background: #f5f5f5;
+  padding: 15px 12px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  margin-right: 25px;
+  margin-bottom: 20px;
+}
+
+/* ===== ОСНОВНОЙ КОНТЕНТ (сохраняет оригинальную ширину) ===== */
+#container {
+  overflow: hidden; /* Не даём контенту обтекать меню */
+}
+
+/* ===== СТИЛИ ДЛЯ НАВИГАЦИИ ===== */
+.sidebar-left ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: inline-block;
 }
 
-.menu-wrapper ul li {
-  display: inline-block;
-  margin: 0 15px;
+.sidebar-left ul li {
+  margin-bottom: 6px;
 }
 
-.menu-wrapper ul li a {
-  display: inline-block;
-  padding: 6px 12px;
+.sidebar-left ul li a {
+  display: block;
+  padding: 6px 10px;
   color: #333;
   text-decoration: none;
   border-radius: 4px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14px;
   transition: background 0.2s, color 0.2s;
 }
 
-.menu-wrapper ul li a:hover {
+.sidebar-left ul li a:hover {
   background: #007acc;
   color: #ffffff;
+}
+
+/* ===== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ ===== */
+@media (max-width: 768px) {
+  .sidebar-left {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  #container {
+    overflow: visible;
+  }
 }
