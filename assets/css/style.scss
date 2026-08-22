@@ -536,7 +536,7 @@ a.download-button span {
 }
 
 /* ============================================================
-   ФУТЕР (выровнен с контентом) — ОДИН БЛОК
+   ФУТЕР (выровнен с контентом)
    ============================================================ */
 .site-footer {
   width: 1100px;
@@ -560,13 +560,13 @@ a.download-button span {
   margin-top: 10px;
   overflow: hidden;
   color: #333;
+  text-align: right;
+  padding: 0 5px;
 }
 
 .site-footer .creds small {
-  float: right;
   font-size: 10px;
   text-align: right;
-  margin-left: 15px;
 }
 
 .site-footer .creds small a {
