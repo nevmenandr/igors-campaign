@@ -62,12 +62,12 @@ h1.title {
 }
 
 /* ============================================================
-   ОСНОВНОЙ КОНТЕЙНЕР (#container) — РАСШИРЕН С ОТСТУПОМ
+   ОСНОВНОЙ КОНТЕЙНЕР (#container) — без отступа слева
    ============================================================ */
 #container {
   width: 1100px;
   max-width: 1100px;
-  margin: 0 0 0 240px; /* отступ слева 240px для выравнивания с футером */
+  margin: 0; /* ← Возвращаем как было */
   border: 1px solid #2a2a2a;
   background: #ddd url(../images/pattern.png);
   box-shadow: 0 0 5px #b1b1b1;
@@ -541,9 +541,11 @@ a.download-button span {
 .site-footer {
   width: 1100px;
   max-width: 1100px;
-  margin: 20px 0 60px 240px;
+  margin: 20px auto 60px auto; /* ← центрируем как и контейнер */
   padding: 0;
   box-sizing: border-box;
+  float: none;
+  clear: both;
 }
 
 .site-footer .owner {
