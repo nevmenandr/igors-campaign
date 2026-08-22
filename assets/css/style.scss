@@ -53,29 +53,49 @@ h1.title {
    ============================================================ */
 .site-header {
   max-width: 1100px;
-  margin: 0 auto;
+  margin-left: 240px;
   padding: 0;
 }
 
 .site-header h1.title {
   margin: 30px 0 10px;
-  text-align: left;
 }
 
 /* ============================================================
-   КОНТЕЙНЕР С МЕНЮ И КОНТЕНТОМ
+   ОСНОВНОЙ КОНТЕЙНЕР (#container) — РАСШИРЕН С ОТСТУПОМ
+   ============================================================ */
+#container {
+  width: 1100px;
+  max-width: 1100px;
+  margin: 0 0 0 240px; /* отступ слева 240px для выравнивания с футером */
+  border: 1px solid #2a2a2a;
+  background: #ddd url(../images/pattern.png);
+  box-shadow: 0 0 5px #b1b1b1;
+}
+
+p.tagline {
+  padding: 20px 20px 0;
+  color: #fff;
+  font-size: 17px;
+}
+
+#main {
+  margin-top: 20px;
+  padding: 0 20px 90px;
+  background-color: #fff;
+}
+
+/* ============================================================
+   МАКЕТ: МЕНЮ СЛЕВА + КОНТЕНТ
    ============================================================ */
 .main-layout {
   display: flex;
   gap: 40px;
   align-items: flex-start;
-  max-width: 1340px; /* 1100px контент + 200px меню + 40px gap */
-  margin: 0 auto;
+  width: 100%;
 }
 
-/* ============================================================
-   БОКОВОЕ МЕНЮ
-   ============================================================ */
+/* БОКОВОЕ МЕНЮ */
 .sidebar-left {
   flex: 0 0 200px;
   background: #f5f5f5;
@@ -109,30 +129,6 @@ h1.title {
   background: #007acc;
   color: #ffffff;
   text-decoration: none;
-}
-
-/* ============================================================
-   ОСНОВНОЙ КОНТЕЙНЕР (#container) — БЕЗ ЛИШНИХ ОТСТУПОВ
-   ============================================================ */
-#container {
-  flex: 1;
-  max-width: 1100px;
-  margin: 0;
-  border: 1px solid #2a2a2a;
-  background: #ddd url(../images/pattern.png);
-  box-shadow: 0 0 5px #b1b1b1;
-}
-
-p.tagline {
-  padding: 20px 20px 0;
-  color: #fff;
-  font-size: 17px;
-}
-
-#main {
-  margin-top: 20px;
-  padding: 0 20px 90px;
-  background-color: #fff;
 }
 
 /* ============================================================
@@ -543,12 +539,11 @@ a.download-button span {
    ФУТЕР (выровнен с контентом)
    ============================================================ */
 .site-footer {
+  width: 1100px;
   max-width: 1100px;
-  margin: 20px auto 60px auto;
+  margin: 20px 0 60px 240px;
   padding: 0;
   box-sizing: border-box;
-  float: none;
-  clear: both;
 }
 
 .site-footer .owner {
@@ -617,14 +612,12 @@ a.download-button span {
   
   .site-header {
     max-width: 100%;
-    margin: 0;
+    margin-left: 0;
   }
   
   .main-layout {
     flex-direction: column;
     gap: 20px;
-    max-width: 100%;
-    margin: 0;
   }
   
   .sidebar-left {
@@ -635,11 +628,13 @@ a.download-button span {
   }
   
   #container {
+    width: 100%;
     max-width: 100%;
     margin: 0;
   }
   
   .site-footer {
+    width: 100%;
     max-width: 100%;
     margin: 20px 0 60px 0;
   }
