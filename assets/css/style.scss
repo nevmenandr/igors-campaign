@@ -1,33 +1,32 @@
 ---
 ---
+@import "{{ site.theme }}"
 
-@import "jekyll-theme-time-machine";
-
-
-/* ===== КОНТЕЙНЕР ДЛЯ МЕНЮ И КОНТЕНТА ===== */
-.content-wrapper {
-  overflow: hidden; /* Очищаем float */
-  margin-top: 10px;
+/* ===== РОДИТЕЛЬСКИЙ КОНТЕЙНЕР ===== */
+.wrapper {
+  position: relative;
 }
 
-/* ===== БОКОВОЕ МЕНЮ СЛЕВА ===== */
+/* ===== БОКОВОЕ МЕНЮ СЛЕВА (абсолютное позиционирование) ===== */
 .sidebar-left {
-  float: left;
+  position: absolute;
+  left: 20px;
+  top: 120px; /* Настраиваем отступ сверху, чтобы меню было ниже заголовка */
   width: 200px;
   background: #f5f5f5;
   padding: 15px 12px;
   border-radius: 6px;
   border: 1px solid #e0e0e0;
-  margin-right: 25px;
-  margin-bottom: 20px;
+  z-index: 10;
 }
 
-/* ===== ОСНОВНОЙ КОНТЕНТ (сохраняет оригинальную ширину) ===== */
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
 #container {
-  overflow: hidden; /* Не даём контенту обтекать меню */
+  margin-left: 240px; /* Добавляем отступ слева, чтобы контент не перекрывался меню */
+  max-width: 920px; /* Оригинальная максимальная ширина из темы */
 }
 
-/* ===== СТИЛИ ДЛЯ НАВИГАЦИИ ===== */
+/* Стили для навигации */
 .sidebar-left ul {
   list-style: none;
   padding: 0;
@@ -54,15 +53,16 @@
 }
 
 /* ===== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ ===== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .sidebar-left {
-    float: none;
+    position: relative;
+    left: 0;
+    top: 0;
     width: 100%;
-    margin-right: 0;
     margin-bottom: 20px;
   }
   
   #container {
-    overflow: visible;
+    margin-left: 0;
   }
 }
