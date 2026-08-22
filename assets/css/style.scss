@@ -3,21 +3,26 @@
 
 @import "jekyll-theme-time-machine";
 
-/* ===== БОКОВОЕ МЕНЮ (float, без flex) ===== */
+---
+---
+@import "{{ site.theme }}";
+
+/* ===== БОКОВОЕ МЕНЮ СЛЕВА ОТ КОНТЕНТА ===== */
 .sidebar-wrapper {
-  float: left;
+  position: absolute;
+  left: -240px; /* Сдвигаем меню влево от контейнера */
+  top: 0;
   width: 200px;
-  margin-right: 20px;
-  margin-bottom: 20px;
   background: #f5f5f5;
   padding: 15px 12px;
   border-radius: 6px;
   border: 1px solid #e0e0e0;
 }
 
-/* Очистка float для #container, чтобы он не обтекал меню */
-#container {
-  overflow: hidden; /* Это заставляет контейнер не обтекать float-элемент */
+/* Родительский контейнер .wrapper должен быть relative для позиционирования */
+.wrapper {
+  position: relative;
+  padding-left: 260px; /* Добавляем отступ слева, чтобы контент не наезжал на меню */
 }
 
 /* Стили для навигации */
@@ -47,14 +52,15 @@
 }
 
 /* ===== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ ===== */
-@media (max-width: 768px) {
-  .sidebar-wrapper {
-    float: none;
-    width: 100%;
-    margin-right: 0;
+@media (max-width: 1024px) {
+  .wrapper {
+    padding-left: 0;
   }
   
-  #container {
-    overflow: visible;
+  .sidebar-wrapper {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
