@@ -4,60 +4,40 @@
 @import "jekyll-theme-time-machine";
 
 
-/* ===== БОКОВОЕ МЕНЮ СЛЕВА ОТ КОНТЕНТА ===== */
-.sidebar-wrapper {
-  position: absolute;
-  left: -240px; /* Сдвигаем меню влево от контейнера */
-  top: 0;
-  width: 200px;
+/* ===== МЕНЮ ПОД ШАПКОЙ ===== */
+.menu-wrapper {
   background: #f5f5f5;
-  padding: 15px 12px;
+  padding: 12px 20px;
   border-radius: 6px;
   border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  text-align: center; /* Центрируем пункты меню */
 }
 
-/* Родительский контейнер .wrapper должен быть relative для позиционирования */
-.wrapper {
-  position: relative;
-  padding-left: 260px; /* Добавляем отступ слева, чтобы контент не наезжал на меню */
-}
-
-/* Стили для навигации */
-.sidebar-nav ul {
+.menu-wrapper ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
 }
 
-.sidebar-nav ul li {
-  margin-bottom: 6px;
+.menu-wrapper ul li {
+  display: inline-block;
+  margin: 0 15px;
 }
 
-.sidebar-nav ul li a {
-  display: block;
-  padding: 6px 10px;
+.menu-wrapper ul li a {
+  display: inline-block;
+  padding: 6px 12px;
   color: #333;
   text-decoration: none;
   border-radius: 4px;
-  font-size: 14px;
-  transition: background 0.2s;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
 }
 
-.sidebar-nav ul li a:hover {
+.menu-wrapper ul li a:hover {
   background: #007acc;
-  color: #fff;
-}
-
-/* ===== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ ===== */
-@media (max-width: 1024px) {
-  .wrapper {
-    padding-left: 0;
-  }
-  
-  .sidebar-wrapper {
-    position: relative;
-    left: 0;
-    width: 100%;
-    margin-bottom: 20px;
-  }
+  color: #ffffff;
 }
