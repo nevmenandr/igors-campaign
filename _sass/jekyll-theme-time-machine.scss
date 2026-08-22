@@ -1,11 +1,9 @@
 ---
 ---
 
-@import "normalize";
+@import "normalize"
 
-/* ============================================================
-   ОСНОВНЫЕ СТИЛИ (сохранены из темы Time Machine)
-   ============================================================ */
+/* Style */
 
 body {
   font-size: 15px;
@@ -18,7 +16,7 @@ a {
   color: #63a52a;
   text-decoration: none;
   transition: opacity ease-in-out 0.3s;
-  -webkit-transition: opacity ease-in-out 0.3s;
+  -webkit-transition: opacity ease-in-out 0.3s;  /* Safari <=6.1, Android <= 4.3 */
 }
 
 a:hover {
@@ -40,7 +38,7 @@ h1.title {
 }
 
 /* ============================================================
-   РАСШИРЕННЫЙ КОНТЕЙНЕР (было 675px → теперь гибкий)
+   РАСШИРЕННЫЙ КОНТЕЙНЕР
    ============================================================ */
 .wrapper {
   max-width: 1400px;
@@ -132,7 +130,7 @@ p.tagline {
 }
 
 /* ============================================================
-   СТИЛИ КНОПОК (из темы, адаптированы под ширину)
+   СТИЛИ КНОПОК
    ============================================================ */
 .download-bar {
   background: #222;
@@ -176,8 +174,8 @@ p.tagline {
   bottom: -15px;
   left: 0;
   transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);  /* IE9 */
+  -webkit-transform: rotate(45deg); /* 2014 current */
 }
 
 .download-bar .trc {
@@ -190,8 +188,8 @@ p.tagline {
   top: -15px;
   right: 0;
   transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);  /* IE9 */
+  -webkit-transform: rotate(45deg); /* 2014 current */
 }
 
 .download-bar .avatar {
@@ -215,11 +213,11 @@ p.tagline {
   width: auto;
   height: auto;
   opacity: 1;
-  filter: alpha(opacity=100);
+  filter: alpha(opacity=100);  /* IE 5-7 */
 }
 
 /* ============================================================
-   СТИЛИ ФУТЕРА (из темы)
+   СТИЛИ ФУТЕРА
    ============================================================ */
 footer {
   margin-bottom: 60px;
@@ -265,7 +263,7 @@ footer .owner p a {
 }
 
 /* ============================================================
-   СТИЛИ MARKDOWN (из темы, адаптированы)
+   СТИЛИ MARKDOWN
    ============================================================ */
 .markdown-body h1,
 .markdown-body h2,
@@ -462,7 +460,7 @@ footer .owner p a {
 }
 
 /* ============================================================
-   КНОПКИ "SCROLL TO TOP" (из темы)
+   КНОПКИ "SCROLL TO TOP"
    ============================================================ */
 .current-section {
   position: fixed;
@@ -476,7 +474,7 @@ footer .owner p a {
   opacity: 0;
   visibility: hidden;
   transition: opacity ease-in-out 0.3s;
-  -webkit-transition: opacity ease-in-out 0.3s;
+  -webkit-transition: opacity ease-in-out 0.3s;  /* Safari <=6.1, Android <= 4.3 */
 }
 
 .current-section p {
@@ -494,14 +492,14 @@ footer .owner p a {
   opacity: 0.8;
   margin-right: 12px;
   margin-top: 12px;
-  filter: alpha(opacity=80);
+  filter: alpha(opacity=80);  /* IE 5-7 */
   transition: opacity ease-in-out 0.3s;
-  -webkit-transition: opacity ease-in-out 0.3s;
+  -webkit-transition: opacity ease-in-out 0.3s;  /* Safari <=6.1, Android <= 4.3 */
 }
 
 .current-section a:hover {
   opacity: 1;
-  filter: alpha(opacity=100);
+  filter: alpha(opacity=100);  /* IE 5-7 */
 }
 
 .current-section a.zip {
@@ -516,9 +514,9 @@ a.zip span {
   display: inline-block;
   text-indent: -10000px;
   opacity: 0.8;
-  filter: alpha(opacity=80);
+  filter: alpha(opacity=80);  /* IE 5-7 */
   transition: opacity ease-in-out 0.3s;
-  -webkit-transition: opacity ease-in-out 0.3s;
+  -webkit-transition: opacity ease-in-out 0.3s;  /* Safari <=6.1, Android <= 4.3 */
 }
 
 a.tar,
@@ -529,9 +527,9 @@ a.tar span {
   display: inline-block;
   text-indent: -10000px;
   opacity: 0.8;
-  filter: alpha(opacity=80);
+  filter: alpha(opacity=80);  /* IE 5-7 */
   transition: opacity ease-in-out 0.3s;
-  -webkit-transition: opacity ease-in-out 0.3s;
+  -webkit-transition: opacity ease-in-out 0.3s;  /* Safari <=6.1, Android <= 4.3 */
 }
 
 a.code {
@@ -542,9 +540,9 @@ a.code {
   display: inline-block;
   text-indent: -10000px;
   opacity: 0.8;
-  filter: alpha(opacity=80);
+  filter: alpha(opacity=80);  /* IE 5-7 */
   transition: opacity ease-in-out 0.3s;
-  -webkit-transition: opacity ease-in-out 0.3s;
+  -webkit-transition: opacity ease-in-out 0.3s;  /* Safari <=6.1, Android <= 4.3 */
 }
 
 a.zip:hover,
@@ -561,11 +559,11 @@ a.download-button {
   text-indent: 0 !important;
   width: auto;
   float: right;
-  background: #999;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#37ADD4', endColorstr='#1B657E');
-  background: -webkit-gradient(linear, left top, left bottom, from(#37ADD4), to(#1B657E));
-  background: -webkit-linear-gradient(top, #37ADD4, #1B657E);
-  background: linear-gradient(to bottom, #37ADD4, #1B657E);
+  background: #999; /* for non-css3 browsers */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#37ADD4', endColorstr='#1B657E'); /* IE <= 9 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#37ADD4), to(#1B657E)); /* ancient webkit browsers */
+  background: -webkit-linear-gradient(top,  #37ADD4,  #1B657E);  /* Safari <=6.1, Android <= 4.3 */
+  background: linear-gradient(to bottom,  #37ADD4,  #1B657E);
   height: auto;
   margin-left: 10px;
 }
