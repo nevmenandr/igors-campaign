@@ -3,22 +3,24 @@
 
 @import "jekyll-theme-time-machine";
 
-/* ===== БОКОВАЯ ПАНЕЛЬ С МЕНЮ ===== */
-.layout-with-sidebar {
-  display: flex;
-  gap: 30px;
-  margin: 20px 0;
-}
-
-.sidebar {
-  flex: 0 0 220px; /* Фиксированная ширина 220px */
+/* ===== БОКОВОЕ МЕНЮ (float, без flex) ===== */
+.sidebar-wrapper {
+  float: left;
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   background: #f5f5f5;
-  padding: 20px 15px;
-  border-radius: 8px;
+  padding: 15px 12px;
+  border-radius: 6px;
   border: 1px solid #e0e0e0;
-  align-self: flex-start;
 }
 
+/* Очистка float для #container, чтобы он не обтекал меню */
+#container {
+  overflow: hidden; /* Это заставляет контейнер не обтекать float-элемент */
+}
+
+/* Стили для навигации */
 .sidebar-nav ul {
   list-style: none;
   padding: 0;
@@ -26,42 +28,33 @@
 }
 
 .sidebar-nav ul li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .sidebar-nav ul li a {
   display: block;
-  padding: 8px 12px;
+  padding: 6px 10px;
   color: #333;
   text-decoration: none;
   border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
-  font-weight: 500;
+  font-size: 14px;
+  transition: background 0.2s;
 }
 
 .sidebar-nav ul li a:hover {
   background: #007acc;
-  color: #ffffff;
-}
-
-.sidebar-nav ul li a.active {
-  background: #007acc;
-  color: #ffffff;
-}
-
-.main-content {
-  flex: 1; /* Занимает оставшееся пространство */
-  min-width: 0;
+  color: #fff;
 }
 
 /* ===== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ ===== */
 @media (max-width: 768px) {
-  .layout-with-sidebar {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    flex: none;
+  .sidebar-wrapper {
+    float: none;
     width: 100%;
+    margin-right: 0;
+  }
+  
+  #container {
+    overflow: visible;
   }
 }
